@@ -1,8 +1,11 @@
-package org.zouzias.qclocktwo.models.time
+package org.zouzias.qclocktwo.examples
 
-import org.zouzias.qclocktwo.models.Time
+import org.zouzias.qclocktwo.examples.ExamplePhrasesIterator
 
-object QclocktwoTime {
+/**
+ * Examples time phrases
+ */
+object ExamplePhrases {
 
   val random = scala.util.Random
 
@@ -13,18 +16,16 @@ object QclocktwoTime {
   val minsLength = minutes.length
   val hoursLength = hours.length
 
-
-  def randomTime(): Time = {
-    (hours(random.nextInt(hoursLength)), minutes(random.nextInt(minsLength)))
+  def randomTime(): Array[String] = {
+    Array(hours(random.nextInt(hoursLength)), minutes(random.nextInt(minsLength)))
   }
 
-  def initTime(): Time = {
-    (hours(0), minutes(0))
+  def initTime(): Array[String] = {
+    Array(hours(0), minutes(0))
   }
-
 
   def main(args: Array[String]) = {
-    val iter = new QClockTwoTimeIterator()
+    val iter = new ExamplePhrasesIterator()
     while(iter.hasNext) {
       println(iter.next())
     }

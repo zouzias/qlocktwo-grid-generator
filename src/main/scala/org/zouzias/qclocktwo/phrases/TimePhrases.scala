@@ -1,4 +1,4 @@
-package org.zouzias.qclocktwo.models.phrases
+package org.zouzias.qclocktwo.phrases
 
 import scala.collection.mutable.ArrayBuffer
 
@@ -19,7 +19,6 @@ class TimePhrases {
   def addPhrase(phrase: WordPhrase): Unit = {
     phrases_.append(phrase)
   }
-
 
   /**
    * Return all phrases
